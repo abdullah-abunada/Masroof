@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_expenses"
+        android:enabled="true"
+        android:icon="@drawable/ic_attach_money_white_48dp"
+        android:title="@string/text_expenses"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_shopping"
+        android:enabled="true"
+        android:icon="@drawable/ic_add_shopping_cart_white_48dp"
+        android:title="@string/text_shopping"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_saving"
+        android:enabled="true"
+        android:icon="@drawable/ic_account_balance_wallet_white_48dp"
+        android:title="@string/text_saving"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_statistics"
+        android:enabled="true"
+        android:icon="@drawable/ic_multiline_chart_white_48dp"
+        android:title="@string/text_statistics"
+        app:showAsAction="ifRoom" />
+</menu>
