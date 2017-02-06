@@ -4,4 +4,7 @@
     <string name="text_saving">الإدخار</string>
     <string name="text_shopping">المشتريات</string>
     <string name="text_statistics">إحصائياتي</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">مرحبا بك من واجهة المصروفات</string>
 </resources>

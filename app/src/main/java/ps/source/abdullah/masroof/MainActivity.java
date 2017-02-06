@@ -3,11 +3,14 @@ package ps.source.abdullah.masroof;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 
+import ps.source.abdullah.masroof.expenses.ExpensesFragment;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -34,21 +37,24 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_expenses:
-                        Log.i("screen","1");
-
+                        ExpensesFragment expensesFragment = new ExpensesFragment();
+                        FragmentManager fragmentManager = getSupportFragmentManager();
+                        FragmentTransaction transaction = fragmentManager.beginTransaction();
+                        transaction.replace(R.id.fragment_container, expensesFragment);
+                        transaction.commit();
                         break;
 
                     case R.id.action_shopping:
-                        Log.i("screen","2");
+                        Log.i("screen", "2");
                         break;
 
                     case R.id.action_saving:
-                        Log.i("screen","3");
+                        Log.i("screen", "3");
                         break;
 
 
                     case R.id.action_statistics:
-                        Log.i("screen","4");
+                        Log.i("screen", "4");
 
                         break;
 
@@ -56,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        //set default fragment
+        ExpensesFragment expensesFragment = new ExpensesFragment();
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.fragment_container, expensesFragment).commit();
 
     }
 
