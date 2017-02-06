@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">مصروف</string>
+    <string name="text_expenses">المصاريف</string>
+    <string name="text_saving">الإدخار</string>
+    <string name="text_shopping">المشتريات</string>
+    <string name="text_statistics">إحصائياتي</string>
 </resources>
