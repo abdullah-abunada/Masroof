@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import ps.source.abdullah.masroof.expenses.ExpensesFragment;
+import ps.source.abdullah.masroof.shopping.ShoppingFragment;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -42,17 +43,21 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+
                 switch (item.getItemId()) {
                     case R.id.action_expenses:
                         ExpensesFragment expensesFragment = new ExpensesFragment();
-                        FragmentManager fragmentManager = getSupportFragmentManager();
-                        FragmentTransaction transaction = fragmentManager.beginTransaction();
                         transaction.replace(R.id.fragment_container, expensesFragment);
                         transaction.commit();
                         break;
 
                     case R.id.action_shopping:
-                        Log.i("screen", "2");
+                        ShoppingFragment shoppingFragment = new ShoppingFragment();
+                        transaction.replace(R.id.fragment_container, shoppingFragment);
+                        transaction.commit();
                         break;
 
                     case R.id.action_saving:
